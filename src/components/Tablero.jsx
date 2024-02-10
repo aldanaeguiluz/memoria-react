@@ -1,9 +1,14 @@
 import Fila from "./Fila"
 
-const Tablero = () => {
+const Tablero = (props) => {
+
     return <>
-        <Fila/>
-        <Fila/>
+        <Fila casillas={props.listaCasillas[0]} 
+            mostrarOnClick={props.mostrarOnClick} 
+            numFila={0}/>
+        <Fila casillas={props.listaCasillas[1]}
+            mostrarOnClick={props.mostrarOnClick}
+            numFila={1} />
     </>
 }
 
